@@ -18,8 +18,11 @@ class Triangle
     end
   end
   
-  # def validate_triangle
-  #   real_
+  def validate_triangle
+    real_triangle = [(s1 + s2 > s3), (s1 + s3 > s2), (s2 + s3 > s1)]
+    [s1, s2, s3].each { |s| real_triangle << false if s <= 0 }
+    raise TriangleError if real_triangle.include?(false)
+  end
   
   class TriangleError < StandardError
     # triangle error code
