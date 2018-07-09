@@ -18,6 +18,8 @@ class Triangle
     end
   end
   
+  def validate_triangle
+    real_
   
   class TriangleError < StandardError
     # triangle error code
